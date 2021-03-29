@@ -3,16 +3,31 @@
 <html>
 
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="Kontakt forma za povratne informacije u vezi sajta">
+    <title>KONTAKTIRANJE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+    <h2 id="vrh"></h2>
+    <div class="navbar">
+        <h3 style="font-family: 'Roboto', sans-serif; text-align:center">
+            <a href="index.html">POČETNA</a>
+            |
+            <a href="Igre.html">IGRE</a>
+            |
+            <a href="About.html">O STRANICI</a>
+            |
+            <a href="Contact.html">KONTAKTIRANJE</a>
+            <hr>
+        </h3>
+    </div>
+    <h2>Kontaktiranje</h2>
     <form>
-        <h2 id="vrh">Vrh stranice</h2>
         <fieldset>
             <legend>Lične informacije</legend>
             Ime:
@@ -22,47 +37,49 @@
             <input type="text">
             <br><br>
             Pol: <br>
-            <input type="radio" name="pol" value="m">Female<br><br>
-            <input type="radio" name="pol" value="z" checked>Male<br>
-            <p>Birthdate: <input type="date"></p>
+            <input type="radio" name="pol" value="m" checked>Muški<br>
+            <input type="radio" name="pol" value="z">Ženski<br>
+            <p>Datum rođenja: <input type="date"></p>
             </p>
         </fieldset>
         <br>
         <fieldset>
-            <legend>Impressions</legend>
+            <legend>Utisci o sajtu</legend>
             <p>
-                How much did you like the content of this website?
+                Koliko vam se svideo sadržaj ovog vebsajta?
                 <select name="strucna_sprema">
-                    <option>I didn't like it</option>
-                    <option>unsure</option>
-                    <option default>I liked it</option>
+                    <option>Nije mi se svideo</option>
+                    <option>Nesiguran</option>
+                    <option selected>Svideo mi se</option>
                 </select>
             </p>
             <p>
-                What background color is most suitable for this website?
-                <input type="color" name="color" value="#ff0000">
+                Koja boja pozadine bi vam se najviše svidela za ovaj vebsajt?
+                <input type="color" name="color" value="#0000ff">
             </p>
             <p>
-                How many times did you visit this website (approximately)?
+                Koliko puta ste posetili ovaj sajt (približno)?
                 <input type="number">
             </p>
         </fieldset>
         <br>
         <fieldset>
-            <legend>Contact form</legend>
+            <legend>Kontakt forma</legend>
             <p>
                 The purpose of contacting: <br><br>
-                <input type="checkbox"> I want to report a problem <br>
-                <input type="checkbox"> I want to make a suggestion <br>
-                <input type="checkbox"> I want to commend this website
+                <input type="checkbox"> Želim da prijavim problem <br>
+                <input type="checkbox"> Želim da napišem sugestiju <br>
             </p>
             <br>
-            <p>Comment:</p>
-            <textarea name="comment" cols="100" rows="10">Comment</textarea>
+            <p>Komentar:</p>
+            <textarea name="komentar" cols="100" rows="10">Napišite komentar ovde...</textarea>
         </fieldset>
         <br><br>
         <input type="submit" value="Pošalji">
     </form>
+    <p>
+        <a href="#vrh"><img src="images/Arrow-Up-PNG-Free-Download.png" width="7%"></a>
+    </p>
 </body>
 
 </html>
