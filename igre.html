@@ -21,19 +21,15 @@
 <body>
     <h2 id="vrh"></h2>
 
-    <h3 style="font-family: 'Roboto', sans-serif; text-align:center; background-color: rgb(0, 35, 102);">
-        <br>
-        <a href="index.html" style="color: rgb(255, 255, 255);">POČETNA</a>
-        |
-        <a href="igre.html" style="color: rgb(255, 255, 255);">IGRE</a>
-        |
-        <a href="muzikaIgara.html" style="color: rgb(255, 255, 255);">MUZIKA IGARA</a>
-        |
-        <a href="about.html" style="color: rgb(255, 255, 255);">O STRANICI</a>
-        |
-        <a href="contact.html" style="color: rgb(255, 255, 255);">KONTAKTIRANJE</a>
-        <hr>
-    </h3>
+    <div class="navigacija">
+        <ul>
+            <li><a href="index.html">POČETNA</a></li>
+            <li><a class="aktivan" href="igre.html">IGRE</a></li>
+            <li><a href="muzikaIgara.html">MUZIKA IGARA</a></li>
+            <li><a href="about.html">O STRANICI</a></li>
+            <li><a href="contact.html">KONTAKTIRANJE</a></li>
+        </ul>
+    </div>
 
     <h2>Igre</h2>
     <h4 style="text-align:center">
@@ -74,9 +70,9 @@
 
     <hr>
 
-    <p>
-        <a href="#vrh"><img src="Images/UpArrow.png" width="7%" style="margin-left: 50%; margin-right: 50%"></a>
-    </p>
+    <div class="kaVrhu">
+        <a href="#vrh"><img src="Images/UpArrow.png" width="100%"></a>
+    </div>
 </body>
 
 </html>

@@ -1,47 +1,133 @@
-* {
-}
+* {}
 
 .header {
-    background-color:;
-
+    background-color: ;
 }
 
-body{
-    background-color: blue;
+body {
+    background-color: white;
 }
 
-div{
-    background-color: rgb(0, 35, 102);
+iframe {
+    ;
+}
+
+div {
+    background-color: rgb(0, 37, 107);
     color: white;
     padding: 1%;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
     animation-name: zaNavigaciju;
     animation-duration: 4s;
+    border-radius: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border-radius: 10px;
+    padding: 1%;
+
 }
 
 @keyframes zaNavigaciju {
-    0% {background-color: rgb(255, 255, 255);}
+    0% {
+        background-color: rgb(255, 255, 255);
+    }
 
-    100% {background-color: rgb(0, 35, 102);}
+    100% {
+        background-color: rgb(0, 35, 102);
+    }
 }
 
 @keyframes ceo {
-    from {background-color: rgb(0, 0, 0);}
+    from {
+        background-color: rgb(0, 0, 0);
+    }
 
-    to {background-color: rgb(255, 255, 255);}
+    to {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+p {
+    font-size: 200%;
+}
+
+link {
+    display: flex;
+}
+
+img {
+    image-rendering: optimizeSpeed;
+    border-image: round;
+    border-radius: 10%;
 }
 
 .navigacija {
     position: sticky;
     top: 0px;
-    background-color: rgb(0, 35, 102);
     color: white;
-    padding: 0.1%;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0%;
+    border: 10%;
+    border-radius: 0;
     animation-name: zaNavigaciju;
     animation-duration: 4s;
 }
 
-.navigacija h3 a {
+.navigacija a {
     padding: 0.1%;
-    margin: 1%;
-    an
+    margin: 0%;
+    background-color: rgb(51, 36, 255);
+    color: white;
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigacija ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navigacija ul li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navigacija a:hover:not(.aktivan) {
+    background-color: rgb(0, 2, 141);
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+.navigacija .aktivan {
+    background-color: rgb(2, 217, 255);
+    color: white;
+}
+
+.kaVrhu {
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    color: white;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 0%;
+    width: 10%;
 }
