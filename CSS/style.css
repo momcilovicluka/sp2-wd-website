@@ -17,6 +17,7 @@ div {
     color: white;
     padding: 1%;
     margin-top: 1%;
+    margin-bottom: 1%;
     margin-left: auto;
     margin-right: auto;
     animation-name: zaNavigaciju;
@@ -106,6 +107,7 @@ img {
 a {
     text-decoration: none;
     color: white;
+    margin: 0%;
 }
 
 .navigacija a:hover:not(.aktivan) {
@@ -114,7 +116,15 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: rgb(2, 217, 255);
+}
+
+a:visited{
+    color: rgb(0, 255, 34);
+}
+
+a:active{
+    color:blue;
 }
 
 .navigacija .aktivan {
@@ -127,7 +137,7 @@ a:hover {
     right: 1%;
     bottom: 1%;
     color: white;
-    background-color: rgba(255, 0, 0, 0);
+    background-color: rgba(0, 2, 141, 0.5);
     padding: 0%;
     width: 10%;
 }
