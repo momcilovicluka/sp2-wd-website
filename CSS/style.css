@@ -21,6 +21,22 @@ div {
     margin-left: auto;
     margin-right: auto;
     animation-name: zaNavigaciju;
+    animation-duration: 3s;
+    border-radius: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+div div{
+    background-color: rgb(0, 27, 78);
+    color: white;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: divDivova;
     animation-duration: 4s;
     border-radius: 25px;
     padding: 20px;
@@ -28,11 +44,19 @@ div {
     width: fit-content;
 }
 
+hr{
+    border-top: 5px dashed blue;
+}
+
 table, th, td {
     border-collapse: collapse;
     border-radius: 10px;
-    padding: 1%;
+    padding: 2%;
+}
 
+mark{
+    background-color: blueviolet;
+    color: white;
 }
 
 @keyframes zaNavigaciju {
@@ -42,6 +66,16 @@ table, th, td {
 
     100% {
         background-color: rgb(0, 35, 102);
+    }
+}
+
+@keyframes divDivova {
+    0% {
+        background-color: rgb(255, 255, 255);
+    }
+
+    100% {
+        background-color: rgb(0, 27, 78);
     }
 }
 
@@ -55,12 +89,42 @@ table, th, td {
     }
 }
 
-p {
+input{
+    background-color: black;
+    color: white;
+}
+
+fieldset{
+    background-color: rgb(0, 29, 82);
+    border-radius: 5%;
+    animation-name: divDivova;
+    animation-duration: 4s;
+}
+
+textarea{
+    background-color: black;
+    color: white;
+    border-radius: 5%;
+}
+
+#slanje{
+    font-size: 300%;
+}
+
+p, h3, #listaIgara {
     font-size: 200%;
 }
 
-link {
-    display: flex;
+dl, dt, dd {
+    font-size: 150%;
+}
+
+strong{
+    font-weight: bolder;
+}
+
+#copyright{
+    font-size: small;
 }
 
 img {
@@ -120,7 +184,7 @@ a:hover {
 }
 
 a:visited{
-    color: rgb(0, 255, 34);
+    color: rgb(2, 217, 255);
 }
 
 a:active{
@@ -132,7 +196,11 @@ a:active{
     color: white;
 }
 
-.kaVrhu {
+h4 a{
+    margin: 0.5em;
+}
+
+#kaVrhu {
     position: fixed;
     right: 1%;
     bottom: 1%;
