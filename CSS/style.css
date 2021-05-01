@@ -197,6 +197,7 @@ img {
     border-radius: 0;
     animation-name: zaNavigaciju;
     animation-duration: 4s;
+    z-index: 1;
 }
 
 .navigacija a {
