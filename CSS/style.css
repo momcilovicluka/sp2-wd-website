@@ -185,6 +185,7 @@ img {
     position: relative;
     top: 1em;
     bottom: 1em;
+    z-index: 1;
 }
 
 .navigacija {
@@ -197,7 +198,7 @@ img {
     border-radius: 0;
     animation-name: zaNavigaciju;
     animation-duration: 4s;
-    z-index: 1;
+    z-index: 100;
 }
 
 .navigacija a {
@@ -210,6 +211,7 @@ img {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    z-index: 100;
 }
 
 .navigacija ul {
@@ -217,10 +219,12 @@ img {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    z-index: 100;
 }
 
 .navigacija ul li {
     display: inline;
+    z-index: 100;
 }
 
 a {
