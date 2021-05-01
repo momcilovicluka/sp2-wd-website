@@ -1,5 +1,9 @@
 * {}
 
+html{
+    scroll-behavior: smooth;
+}
+
 .header {
     background-color: ;
 }
@@ -97,6 +101,21 @@ mark{
     }
 }
 
+@keyframes pomeranje {
+    0%   {left:-10%; top:0px;}
+    100%  {left:110%; top:0px;}
+  }
+
+.sajtovi{
+    position: relative;
+    padding: 1%;
+    margin: 2%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 input{
     background-color: black;
     color: white;
@@ -141,9 +160,31 @@ img {
     border-radius: 10%;
 }
 
+#gamepad{
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    z-index: 0;
+    width: 10%;
+}
+
+#nyan{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: -1;
+    width: 10%;
+    animation-name: pomeranje;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
 .slika{
     width: fit-content;
     width: auto;
+    position: relative;
+    top: 1em;
+    bottom: 1em;
 }
 
 .navigacija {
@@ -193,7 +234,7 @@ a {
 }
 
 a:hover {
-    color: rgb(2, 217, 255);
+    color: rgb(2, 255, 99);
 }
 
 a:visited{
