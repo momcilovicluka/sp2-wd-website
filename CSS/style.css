@@ -107,7 +107,7 @@ mark {
 
 @keyframes pomeranje {
     0% {
-        left: 0%;
+        left: -5%;
         top: 0px;
     }
 
@@ -134,7 +134,7 @@ input {
 
 fieldset {
     background-color: rgb(0, 29, 82);
-    border-radius: 5%;
+    border-radius: 15px;
     animation-name: divDivova;
     animation-duration: 4s;
 }
@@ -142,7 +142,7 @@ fieldset {
 textarea {
     background-color: black;
     color: white;
-    border-radius: 5%;
+    border-radius: 15px;
 }
 
 #slanje {
@@ -186,7 +186,7 @@ img {
 #nyan {
     position: absolute;
     top: 10%;
-    left: 50%;
+    left: 10%;
     z-index: -1;
     width: 10%;
     animation-name: pomeranje;
