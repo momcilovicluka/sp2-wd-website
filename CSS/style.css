@@ -1,6 +1,6 @@
 * {}
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -12,16 +12,18 @@ body {
     background-color: white;
 }
 
-iframe {
-    ;
-}
-
-h3{
+h3 {
     color: white;
     background-color: rgb(0, 37, 107);
     width: fit-content;
-    border-radius: 15%;
+    border-radius: 15px;
     padding: 0.5%;
+}
+
+span {
+    background-color: rgb(0, 0, 82);
+    border-radius: 20px;
+    padding: 5%;
 }
 
 div {
@@ -40,7 +42,7 @@ div {
     width: fit-content;
 }
 
-div div{
+div div {
     background-color: rgb(0, 27, 78);
     color: white;
     padding: 1%;
@@ -56,17 +58,19 @@ div div{
     width: fit-content;
 }
 
-hr{
+hr {
     border-top: 5px dashed blue;
 }
 
-table, th, td {
+table,
+th,
+td {
     border-collapse: collapse;
     border-radius: 10px;
     padding: 2%;
 }
 
-mark{
+mark {
     background-color: blueviolet;
     color: white;
 }
@@ -102,11 +106,18 @@ mark{
 }
 
 @keyframes pomeranje {
-    0%   {left:-10%; top:0px;}
-    100%  {left:110%; top:0px;}
-  }
+    0% {
+        left: 0%;
+        top: 0px;
+    }
 
-.sajtovi{
+    100% {
+        left: 100%;
+        top: 0px;
+    }
+}
+
+.sajtovi {
     position: relative;
     padding: 1%;
     margin: 2%;
@@ -116,41 +127,45 @@ mark{
     text-align: center;
 }
 
-input{
+input {
     background-color: black;
     color: white;
 }
 
-fieldset{
+fieldset {
     background-color: rgb(0, 29, 82);
     border-radius: 5%;
     animation-name: divDivova;
     animation-duration: 4s;
 }
 
-textarea{
+textarea {
     background-color: black;
     color: white;
     border-radius: 5%;
 }
 
-#slanje{
+#slanje {
     font-size: 300%;
 }
 
-p, h3, #listaIgara {
+p,
+h3,
+#listaIgara {
     font-size: 200%;
 }
 
-dl, dt, dd {
+dl,
+dt,
+dd {
     font-size: 150%;
 }
 
-strong{
+strong {
     font-weight: bolder;
 }
 
-#copyright{
+#copyright {
     font-size: small;
 }
 
@@ -160,7 +175,7 @@ img {
     border-radius: 10%;
 }
 
-#gamepad{
+#gamepad {
     position: absolute;
     right: 5%;
     top: 2%;
@@ -168,7 +183,7 @@ img {
     width: 10%;
 }
 
-#nyan{
+#nyan {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -179,7 +194,7 @@ img {
     animation-iteration-count: infinite;
 }
 
-.slika{
+.slika {
     width: fit-content;
     width: auto;
     position: relative;
@@ -242,12 +257,12 @@ a:hover {
     color: rgb(2, 255, 99);
 }
 
-a:visited{
+a:visited {
     color: rgb(2, 217, 255);
 }
 
-a:active{
-    color:blue;
+a:active {
+    color: blue;
 }
 
 .navigacija .aktivan {
@@ -255,8 +270,12 @@ a:active{
     color: white;
 }
 
-h4 a{
+h4 a {
     margin: 0.5em;
+}
+
+.prvaStrana {
+    color: white;
 }
 
 #kaVrhu {
@@ -267,4 +286,5 @@ h4 a{
     background-color: rgba(0, 2, 141, 0.5);
     padding: 0%;
     width: 10%;
+    z-index: 100;
 }
