@@ -255,6 +255,7 @@ a {
 
 a:hover {
     color: rgb(2, 255, 99);
+    text-transform: uppercase;
 }
 
 a:visited {
