@@ -279,6 +279,25 @@ h4 a {
     color: white;
 }
 
+#levi{
+    float:left;
+    width:30%;
+    height:100%;
+}
+
+#centar{
+    float:left;
+    width:30%;
+    height:100%;
+    margin-left:20px;
+}
+
+#desni{
+    float:right;
+    width:30%;
+    height:100%;
+}
+
 #kaVrhu {
     position: fixed;
     right: 1%;
