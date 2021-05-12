@@ -203,7 +203,7 @@ img {
     z-index: 1;
 }
 
-.navigacija {
+div.navigacija {
     position: sticky;
     top: 0px;
     color: white;
@@ -216,7 +216,7 @@ img {
     z-index: 100;
 }
 
-.navigacija a {
+div.navigacija a {
     padding: 0.1%;
     margin: 0%;
     background-color: rgb(51, 36, 255);
@@ -229,7 +229,7 @@ img {
     z-index: 100;
 }
 
-.navigacija ul {
+div.navigacija ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -237,7 +237,7 @@ img {
     z-index: 100;
 }
 
-.navigacija ul li {
+div.navigacija ul li {
     display: inline;
     z-index: 100;
 }
