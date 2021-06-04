@@ -4,6 +4,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="js/script.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -33,21 +34,22 @@
 
     <img id="nyan" src="Images/nyancat.gif">
 
-    <h3>Kontaktiranje</h3>
+    <h3 id="naslov" onmouseout="vratiNaslov()" onmouseover="povecajNaslov()">Kontaktiranje</h3>
     <div style="width: 90%;">
-        <form>
-            <fieldset>
+        <form name="forma" action="success.html" onsubmit="return provera()">
+            <fieldset id="fieldset1">
                 <legend>Lične informacije <sub>1</sub> </legend>
-                Ime:
-                <input type="text">
-                <br>
-                Prezime:
-                <input type="text">
-                <br><br>
-                Pol: <br>
-                <input type="radio" name="pol" value="m" checked>Muški<br>
-                <input type="radio" name="pol" value="z">Ženski<br>
-                <p>Datum rođenja: <input type="date"></p>
+                <p>
+                    Ime:
+                    <input id="ime" type="text" name="ime">
+                    <br>
+                    Prezime:
+                    <input id="prezime" type="text" name="prezime">
+                    <br><br>
+                    Pol: <br>
+                    <input type="radio" name="pol" value="m" checked>Muški<br>
+                    <input type="radio" name="pol" value="z">Ženski<br>
+                    <p>Datum rođenja: <input id="datum" name="datum" type="date"></p>
                 </p>
             </fieldset>
             <br>
@@ -65,23 +67,23 @@
                 </p>
                 <p>
                     Koja boja pozadine bi vam se najviše svidela za ovaj vebsajt?
-                    <input type="color" name="color" value="#ffffff">
+                    <input onchange="bojaPozadine()" type="color" name="color" id="color" value="#ffffff">
                 </p>
                 <p>
                     Koliko puta ste posetili ovaj sajt <sub>(približno)</sub> ?
-                    <input type="number">
+                    <input id="brojPoseta" min="1" value="1" type="number">
                 </p>
                 <p>
                     Koje od navedenih igara su vam se svidele? <br><br>
-                    <input type="checkbox"> Brawlhalla <br>
-                    <input type="checkbox"> Call Of Duty: Warzone <br>
-                    <input type="checkbox"> Grand Theft Auto 5 <br>
-                    <input type="checkbox"> League Of Legends <br>
-                    <input type="checkbox"> Halo 3 <br>
+                    <input name="check1" type="checkbox"> Brawlhalla <br>
+                    <input name="check1" type="checkbox"> Call Of Duty: Warzone <br>
+                    <input name="check1" type="checkbox"> Grand Theft Auto 5 <br>
+                    <input name="check1" type="checkbox"> League Of Legends <br>
+                    <input name="check1" type="checkbox"> Halo 3 <br>
                 </p>
                 <p>
                     Koliko vam se svidela pesma
-                    <a href="muzikaIgara.html"><b>Legends never die</b></a>
+                    <a href="muzikaIgara.html" target="_blank"><b>Legends never die</b></a>
                     ?
                     <br>
                     <input type="range" name="pesma" id="LND" min="0" max="10">
@@ -97,7 +99,8 @@
                 </p>
                 <br>
                 <p>Komentar:</p>
-                <textarea style="width: 100%" name="komentar" cols="100" rows="15">Napišite komentar ovde...</textarea>
+                <textarea id="komentar" onclick="obrisiSadrzaj()" style="width: 100%" name="komentar" cols="100"
+                    rows="15">Napišite komentar ovde...</textarea>
             </fieldset>
             <br><br>
             <p style="text-align: center; font-size:150%"><input id="slanje" type="submit" value="Pošalji"></p>
