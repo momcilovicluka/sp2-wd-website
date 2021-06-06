@@ -5,6 +5,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="js/script.js"></script>
+    <script>document.getElementById("komentar").addEventListener("click", function() {
+        alert("Vase misljenje nam je vazno");
+      });</script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -19,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body onload="maxDatum()">
     <h2 id="vrh"></h2>
 
     <div class="navigacija">
@@ -35,8 +38,8 @@
     <img id="nyan" src="Images/nyancat.gif">
 
     <h3 id="naslov" onmouseout="vratiNaslov()" onmouseover="povecajNaslov()">Kontaktiranje</h3>
-    <div style="width: 90%;">
-        <form name="forma" action="success.html" onsubmit="return provera()">
+    <div style="width: 70%;">
+        <form name="forma" onsubmit="return provera()">
             <fieldset id="fieldset1">
                 <legend>Lične informacije <sub>1</sub> </legend>
                 <p>
@@ -49,7 +52,7 @@
                     Pol: <br>
                     <input type="radio" name="pol" value="m" checked>Muški<br>
                     <input type="radio" name="pol" value="z">Ženski<br>
-                    <p>Datum rođenja: <input id="datum" name="datum" type="date"></p>
+                    <p>Datum rođenja: <input id="datum" name="datum" type="date" min="1900-01-01" max="2021-06-06"></p>
                 </p>
             </fieldset>
             <br>
@@ -67,11 +70,11 @@
                 </p>
                 <p>
                     Koja boja pozadine bi vam se najviše svidela za ovaj vebsajt?
-                    <input onchange="bojaPozadine()" type="color" name="color" id="color" value="#ffffff">
+                    <input oninput="bojaPozadine()" type="color" name="color" id="color" value="#ffffff">
                 </p>
                 <p>
                     Koliko puta ste posetili ovaj sajt <sub>(približno)</sub> ?
-                    <input id="brojPoseta" min="1" value="1" type="number">
+                    <input onchange="losBRP()" id="brojPoseta" min="1" value="1" type="number">
                 </p>
                 <p>
                     Koje od navedenih igara su vam se svidele? <br><br>
@@ -99,8 +102,9 @@
                 </p>
                 <br>
                 <p>Komentar:</p>
-                <textarea id="komentar" onclick="obrisiSadrzaj()" style="width: 100%" name="komentar" cols="100"
+                <textarea onkeyup="losKomentar()" id="komentar" onclick="obrisiSadrzaj()" style="width: 100%" name="komentar" cols="100"
                     rows="15">Napišite komentar ovde...</textarea>
+                <p style="text-align: center;" id="komentarKomentar"></p>
             </fieldset>
             <br><br>
             <p style="text-align: center; font-size:150%"><input id="slanje" type="submit" value="Pošalji"></p>

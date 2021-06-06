@@ -1,5 +1,28 @@
 "use strict";
 
+var pos = 10;
+var povecavaj = true;
+
+function nyanMove() {
+  nyan = document.getElementById("nyan");
+
+  if (pos <= 4) {
+    povecavaj = true;
+  } else if (pos >= 15) {
+    povecavaj = false;
+  }
+
+  if (povecavaj) {
+    pos++;
+    nyan.style.top = pos + "%";
+  } else {
+    pos--;
+    nyan.style.top = pos + "%";
+  }
+}
+
+setInterval(nyanMove, 50);
+
 function povecajNaslov() {
   document.getElementById("naslov").style.textTransform = "uppercase";
 }
@@ -7,17 +30,6 @@ function povecajNaslov() {
 function vratiNaslov() {
   document.getElementById("naslov").style.textTransform = "initial";
 }
-
-var boje = ["red", "orange", "yellow", "green", "blue", "purple"];
-var trenutna = 0;
-
-function dugaJun() {
-  var heder = document.getElementsByClassName("header")[0];
-  trenutna = (trenutna + 1) % boje.length;
-  heder.style.backgroundColor = boje[trenutna];
-}
-
-setInterval(dugaJun, 500);
 
 function unetoIme() {
   var ime = document.forma.ime;
@@ -78,6 +90,36 @@ function proveriDatum() {
   return Date.parse(datum);
 }
 
+function maxDatum() {
+  var novi = new Date();
+  var datum = document.getElementById("datum");
+  var dan = novi.getDate();
+
+  if (dan < 10) {
+    dan = '0' + dan;
+  }
+
+  var mesec = novi.getMonth() + 1;
+
+  if (mesec < 10) {
+    mesec = '0' + mesec;
+  }
+
+  var godina = novi.getFullYear();
+  datum.setAttribute("max", godina + '-' + mesec + '-' + dan);
+  datum.oninvalid = losDatum;
+}
+
+function losDatum() {
+  this.setCustomValidity("");
+
+  if (this.validity.rangeOverflow) {
+    this.setCustomValidity("Unesite datum ranije od danas");
+  } else if (this.validity.rangeUnderflow) {
+    this.setCustomValidity("Unesite datum kasnije od 01.01.1900.");
+  }
+}
+
 function bojaPozadine() {
   var boja = document.getElementById("color").value;
   document.body.style.backgroundColor = boja;
@@ -97,32 +139,67 @@ function proveriCheckbox1() {
   return false;
 }
 
+function losBRP() {
+  var brPoseta = document.getElementById("brojPoseta");
+
+  if (!brPoseta.checkValidity()) {
+    window.alert(brPoseta.validationMessage);
+  }
+}
+
+function proveriKomentar() {
+  return document.getElementById("komentar").value.length > 200;
+}
+
+function losKomentar() {
+  var komentar = document.getElementById("komentar");
+
+  if (komentar.value.length > 200) {
+    document.getElementById("komentarKomentar").innerHTML = "Molimo Vas skratite komentar ( " + komentar.value.length + " )";
+    document.getElementById("komentarKomentar").setAttribute("class", "lose");
+  } else {
+    document.getElementById("komentarKomentar").innerHTML = "Komentar je u okviru granica ( " + komentar.value.length + " )";
+    document.getElementById("komentarKomentar").setAttribute("class", "dobro");
+  }
+}
+
 function obrisiSadrzaj() {
   if (document.getElementById("komentar").value == "Napišite komentar ovde...") document.getElementById("komentar").value = "";
 }
 
 function provera() {
   if (!unetoIme()) {
+    window.scrollTo(0, 0);
     return false;
   } else if (!proveriIme()) {
+    window.scrollTo(0, 0);
     window.alert("Dužina imena treba da je izmedju 2 i 15 znakova.");
     return false;
   } else if (!pocinjeVelikimIme()) {
+    window.scrollTo(0, 0);
     window.alert("Ime treba poceti velikim pocetnim slovom");
     return false;
   } else if (!unetoPrezime()) {
+    window.scrollTo(0, 0);
     return false;
   } else if (!proveriPrezime()) {
+    window.scrollTo(0, 0);
     window.alert("Dužina prezimena treba da je izmedju 3 i 20 znakova.");
     return false;
   } else if (!pocinjeVelikimPrezime()) {
+    window.scrollTo(0, 0);
     window.alert("Prezime treba poceti velikim pocetnim slovom");
     return false;
   } else if (!proveriDatum()) {
+    window.scrollTo(0, 0);
     window.alert("Morate uneti datum");
     return false;
   } else if (!proveriCheckbox1()) {
+    window.scrollTo(0, 500);
     window.alert("Morate čekirati makar jedan element");
+    return false;
+  } else if (proveriKomentar()) {
+    window.alert("Komentar nije u okviru granica");
     return false;
   } else {
     return true;
