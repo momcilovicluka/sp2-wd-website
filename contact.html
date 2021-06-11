@@ -5,9 +5,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="js/script.js"></script>
-    <script>document.getElementById("komentar").addEventListener("click", function() {
-        alert("Vase misljenje nam je vazno");
-      });</script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -38,7 +35,7 @@
     <img id="nyan" src="Images/nyancat.gif">
 
     <h3 id="naslov" onmouseout="vratiNaslov()" onmouseover="povecajNaslov()">Kontaktiranje</h3>
-    <div style="width: 70%;">
+    <div style="width: 90%;" onload="pol()">
         <form name="forma" onsubmit="return provera()">
             <fieldset id="fieldset1">
                 <legend>Lične informacije <sub>1</sub> </legend>
@@ -50,8 +47,9 @@
                     <input id="prezime" type="text" name="prezime">
                     <br><br>
                     Pol: <br>
-                    <input type="radio" name="pol" value="m" checked>Muški<br>
-                    <input type="radio" name="pol" value="z">Ženski<br>
+                    <input oninput="polSlikaIzmena()" type="radio" name="pol" id="muski" value="m" checked>Muški<br>
+                    <input oninput="polSlikaIzmena()" type="radio" name="pol" id="zenski" value="z">Ženski<br>
+                    <img height="50px" width="50px" id="polSlika" src="Images/male-symbol.png">
                     <p>Datum rođenja: <input id="datum" name="datum" type="date" min="1900-01-01" max="2021-06-06"></p>
                 </p>
             </fieldset>

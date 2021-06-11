@@ -81,6 +81,16 @@ function pocinjeVelikimPrezime() {
     return 'A' <= str[0] && str[0] <= 'Z';
 }
 
+function polSlikaIzmena() {
+    var slikaPol = document.getElementById("polSlika")
+    if(document.getElementById("muski").checked){
+        slikaPol.src = "Images/male-symbol.png";
+    }
+    else if(document.getElementById("zenski").checked){
+        slikaPol.src = "Images/female-symbol.png";
+    }
+}
+
 function proveriDatum() {
     var datum = document.getElementById("datum").value;
     return Date.parse(datum);
